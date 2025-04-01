@@ -1,8 +1,5 @@
 package com.aribb.morekeybinds;
 
-import java.lang.reflect.Method;
-import java.lang.Object;
-
 import org.lwjgl.glfw.GLFW;
 
 import net.minecraft.client.option.KeyBinding;
@@ -24,9 +21,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
 
     ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (attackKb.wasPressed()) {
-				Method doAttack = client.getClass().getDeclaredMethod("doAttack");
-        doAttack.setAccessible(true);
-        Object attacked = doAttack.invoke(client);
+				client.doAttack();
 			}
 		});
 	}
