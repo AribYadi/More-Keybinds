@@ -16,7 +16,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
       "key.morekeybinds.attack",
       InputUtil.Type.MOUSE,
       GLFW.GLFW_MOUSE_BUTTON_LEFT,
-      "key.category.mousekeybinds"
+      "key.category.morekeybinds"
     ));
 
     ClientTickEvents.END_CLIENT_TICK.register(client -> {
