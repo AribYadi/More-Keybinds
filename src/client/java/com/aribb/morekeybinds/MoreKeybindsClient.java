@@ -24,7 +24,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
 
     ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (attackKb.wasPressed()) {
-				Method doAttack = MinecraftClient.getDeclaredMethod("doAttack");
+				Method doAttack = MinecraftClient.getClass().getDeclaredMethod("doAttack");
         doAttack.setAccessible(true);
         doAttack.invoke(client);
 			}
