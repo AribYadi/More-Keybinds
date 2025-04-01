@@ -15,7 +15,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
     KeyBinding attackKb = KeyBindingHelper.registerKeyBinding(new KeyBinding(
       "key.morekeybinds.attack",
       InputUtil.Type.MOUSE,
-      GLFW.GLFW_MOUSE_BUTTON_LEFT,
+      GLFW.GLFW_MOUSE_BUTTON_RIGHT,
       "key.category.morekeybinds"
     ));
 
