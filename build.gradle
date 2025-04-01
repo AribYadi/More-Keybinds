@@ -29,6 +29,7 @@ loom {
 	}
 
   accessWidenerPath = file("src/main/resources/more-keybinds.accesswidener")
+  accessWidener = file("src/main/resources/more-keybinds.accesswidener")
 
 }
 
