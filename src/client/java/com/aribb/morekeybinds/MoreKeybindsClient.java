@@ -20,8 +20,10 @@ public class MoreKeybindsClient implements ClientModInitializer {
     ));
 
     ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			while (binding1.wasPressed()) {
-				client.doAttack();
+			while (attackKb.wasPressed()) {
+				Method doAttack = client.getClass().getDeclaredMethod("doAttack");
+        doAttack.setAccessible(true);
+        doAttack.invoke();
 			}
 		});
 	}
