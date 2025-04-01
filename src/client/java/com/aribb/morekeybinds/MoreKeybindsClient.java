@@ -25,7 +25,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
 			while (attackKb.wasPressed()) {
 				Method doAttack = client.getClass().getDeclaredMethod("doAttack");
         doAttack.setAccessible(true);
-        doAttack.invoke();
+        doAttack.invoke(client);
 			}
 		});
 	}
