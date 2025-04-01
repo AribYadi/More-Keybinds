@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import org.lwjgl.glfw.GLFW;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 
@@ -23,7 +24,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
 
     ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (attackKb.wasPressed()) {
-				Method doAttack = client.getClass().getDeclaredMethod("doAttack");
+				Method doAttack = MinecraftClient.getDeclaredMethod("doAttack");
         doAttack.setAccessible(true);
         doAttack.invoke(client);
 			}
