@@ -1,6 +1,7 @@
 package com.aribb.morekeybinds;
 
 import java.lang.reflect.Method;
+import java.lang.Object;
 
 import org.lwjgl.glfw.GLFW;
 
@@ -25,7 +26,7 @@ public class MoreKeybindsClient implements ClientModInitializer {
 			while (attackKb.wasPressed()) {
 				Method doAttack = client.getClass().getDeclaredMethod("doAttack");
         doAttack.setAccessible(true);
-        boolean attacked = doAttack.invoke(client);
+        Object attacked = doAttack.invoke(client);
 			}
 		});
 	}
