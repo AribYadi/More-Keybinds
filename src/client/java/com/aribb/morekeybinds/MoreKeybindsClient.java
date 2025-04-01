@@ -1,5 +1,7 @@
 package com.aribb.morekeybinds;
 
+import java.lang.reflect.Method;
+
 import org.lwjgl.glfw.GLFW;
 
 import net.minecraft.client.option.KeyBinding;
